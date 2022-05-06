@@ -11,12 +11,12 @@ def main():
     global cancel_key
     if getTheme() == "green":
         banner()
-    elif getTheme() == "schwarz":
-        banner("schwarz")
-    elif getTheme() == "feuer":
-        banner("feuer")
-    elif getTheme() == "wasser":
-        banner("wasser")
+    elif getTheme() == "black":
+        banner("black")
+    elif getTheme() == "fire":
+        banner("fire")
+    elif getTheme() == "water":
+        banner("water")
     elif getTheme() == "neon":
         banner("neon")
 
@@ -213,7 +213,7 @@ def main():
     {Fore.RESET}[{Fore.RED}4{Fore.RESET}] {Fore.RED}Exit...    
                         ''')
         secondchoice = input(
-            f'{Fore.GREEN}[{Fore.CYAN}>>>{Fore.GREEN}] {Fore.RESET}Setting: {Fore.RED}')
+            f'{Fore.GREEN}[{Fore.YELLOW}>{Fore.GREEN}] {Fore.RESET}Setting: {Fore.RED}')
         if secondchoice not in ["1", "2", "3", "4"]:
             print(f'{Fore.RESET}[{Fore.RED}Error{Fore.RESET}] : Invalid Settings')
             sleep(1)
@@ -231,11 +231,11 @@ def main():
             if themechoice == "1":
                 setTheme('green')
             elif themechoice == "2":
-                setTheme('schwarz')
+                setTheme('black')
             elif themechoice == "3":
-                setTheme('feuer')
+                setTheme('fire')
             elif themechoice == "4":
-                setTheme('wasser')
+                setTheme('water')
             elif themechoice == "5":
                 setTheme('neon')
             else:
