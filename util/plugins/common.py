@@ -260,7 +260,7 @@ def banner(theme=None):
 > Version : {THIS_VERSION}
                                                                   
 > Created by dnx#0007           
-> CREW PROJECT                                 '''.replace('█', f'{Fore.WHITE}█{Fore.GREEN}') + f'''   
+> NITRO GENERATOR                                 '''.replace('█', f'{Fore.WHITE}█{Fore.GREEN}') + f'''   
 {Fore.WHITE}────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────{Fore.RESET}
 {Fore.RESET}[{Fore.GREEN}1{Fore.RESET}]{Fore.LIGHTBLACK_EX} Nitro Generator                                  
 {Fore.RESET}[{Fore.GREEN}2{Fore.RESET}]{Fore.LIGHTBLACK_EX} Credits                  
@@ -282,7 +282,7 @@ def bannerTheme(type1, type2):
 > Version : {THIS_VERSION}
 
 > Created by dnx#0023           
-> CREW PROJECT                                 ''')+type2('''  
+> NITRO GENERATOR                                 ''')+type2('''  
 ────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
 [1] Nitro Generator                                   
 [2] Credits                  

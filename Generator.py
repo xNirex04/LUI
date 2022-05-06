@@ -1,16 +1,11 @@
-import multiprocessing
-import keyboard
-import base64
-
 from util.plugins.common import *
 from util.plugins.update import search_for_updates
-import util.info
 
 threads = 3
 cancel_key = "ctrl+x"
 
 def main():
-    setTitle(f"Logged Project {THIS_VERSION}")
+    setTitle(f"NITRO GENERATOR {THIS_VERSION}")
     clear()
     global threads
     global cancel_key
@@ -26,7 +21,7 @@ def main():
         banner("neon")
 
     choice = input(
-            f'{Fore.GREEN}[{Fore.CYAN}>>>{Fore.GREEN}] {Fore.RESET}Auswahl: {Fore.RED}')
+            f'{Fore.GREEN}[{Fore.YELLOW}>{Fore.GREEN}] {Fore.RESET}Choice: {Fore.RED}')
     #all options
     if choice == "1":
         import ctypes
@@ -34,10 +29,10 @@ def main():
         import os
         import time
         LICNECE = """
-        Copyright (c) 2021 Drillenissen#4268 logicguy.mailandcontact@gmail.com
-        Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-        The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-        THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+        Copyright (c) 2021 dnx#0023
+
+        THIS TOOL IS FROM BLACK X DISCORD SERVER, THIS TOOL STATUS IS FREE AND IS NOT TOO OP!!
+
         """
 
         USE_WEBHOOK = True
@@ -54,174 +49,155 @@ def main():
             input(
                 f"Module discord_webhook not installed, to install run '{'py -3' if os.name == 'nt' else 'python3.8'} -m pip install discord_webhook'\nYou can ignore this error if you aren't going to use a webhook.\nPress enter to continue.")
             USE_WEBHOOK = False
-        try:  # Setup try statement to catch the error
-            import requests  # Try to import requests
-        except ImportError:  # If it has not been installed
-    # Tell the user it has not been installed and how to install it
+        try: 
+            import requests  
+        except ImportError:  
             input(
                 f"Module requests not installed, to install run '{'py -3' if os.name == 'nt' else 'python3.8'} -m pip install requests'\nPress enter to exit")
-            exit()  # Exit the program
-        try:  # Setup try statement to catch the error
-            import numpy  # Try to import requests
-        except ImportError:  # If it has not been installed
-    # Tell the user it has not been installed and how to install it
+            exit()  
+        try:  
+            import numpy  
+        except ImportError:  
             input(
                 f"Module numpy not installed, to install run '{'py -3' if os.name == 'nt' else 'python3.8'} -m pip install numpy'\nPress enter to exit")
-            exit()  # Exit the program
+            exit()
 
-# check if user is connected to internet
         url = "https://github.com"
         try:
-            response = requests.get(url)  # Get the responce from the url
+            response = requests.get(url) 
             print("Internet check")
             time.sleep(.4)
         except requests.exceptions.ConnectionError:
-    # Tell the user
-            input("You are not connected to internet, check your connection and try again.\nPress enter to exit")
-            exit()  # Exit program
+            input(f"{Fore.GREEN}[{Fore.YELLOW}>{Fore.GREEN}] {Fore.YELLOW}You are not connected to internet, check your connection and try again {Fore.RESET}/ {Fore.CYAN}Press Enter to Exit")
+            sleep(1.5)
+            main() 
 
 
-        class NitroGen:  # Initialise the class
-            def __init__(self):  # The initaliseaiton function
-                self.fileName = "Nitro Codes.txt"  # Set the file name the codes are stored in
+        class NitroGen:
+            def __init__(self):
+                self.fileName = "Nitro Codes.txt" 
 
-            def main(self):  # The main function contains the most important code
-                os.system('cls' if os.name == 'nt' else 'clear')  # Clear the screen
-                if os.name == "nt":  # If the system is windows
+            def main(self): 
+                os.system('cls' if os.name == 'nt' else 'clear') 
+                if os.name == "nt": 
                     print("")
                     ctypes.windll.kernel32.SetConsoleTitleW(
-                        "Nitro Generator and Checker - Made by Drillenissen#4268")  # Change the
-                else:  # Or if it is unix
-                    print(f'\33]0;Nitro Generator and Checker - Made by Drillenissen#4268\a',
-                        end='', flush=True)  # Update title of command prompt
+                        f"Nitro Generator - Version {THIS_VERSION}") 
+                else: 
+                    print(f'\33]0;Nitro Generator -Version {THIS_VERSION}\a',
+                        end='', flush=True)
 
                 print("""
-   _____ ______ _   _ ______ _____         _______ ____  _____  
-  / ____|  ____| \ | |  ____|  __ \     /\|__   __/ __ \|  __ \ 
- | |  __| |__  |  \| | |__  | |__) |   /  \  | | | |  | | |__) |
- | | |_ |  __| | . ` |  __| |  _  /   / /\ \ | | | |  | |  _  / 
- | |__| | |____| |\  | |____| | \ \  / ____ \| | | |__| | | \ \ 
-  \_____|______|_| \_|______|_|  \_\/_/    \_\_|  \____/|_|  \_|
+    ,------.  ,--.  ,--.,--.   ,--. 
+    |  .-.  \ |  ,'.|  | \  `.'  /    .̸̺̓̉̾͊̕N͓̽I͓̽T͓̽R͓̽O͓̽.̸̺̓̉̾͊̕
+    |  |  \  :|  |' '  |  .'    \     .̸̺̓̉̾͊̕2͓̽0͓̽2͓̽2͓̽.̸̺̓̉̾͊̕
+    |  '--'  /|  | `   | /  .'.  \    .̸̺̓̉̾͊̕.̸̺̓̉̾͊̕.̸̺̓̉̾͊̕ FREE VERSION.̸̺̓̉̾͊̕.̸̺̓̉̾͊̕
+    `-------' `--'  `--''--'   '--'  
                                                                 
                                                                 
-                                                        """)  # Print the title card
-                time.sleep(2)  # Wait a few seconds
-        # Print who developed the code
-                self.slowType("Made by: Drillenissen#4268 && Benz#1131", .02)
-                time.sleep(1)  # Wait a little more
-        # Print the first question
+                                                        """) 
+                time.sleep(2)
+                self.slowType(f"{Fore.CYAN}Version : {THIS_VERSION}", .02)
+                time.sleep(1)
                 self.slowType(
-                    "\nInput How Many Codes to Generate and Check: ", .02, newLine=False)
+                    f"\n{Fore.GREEN}[{Fore.YELLOW}>{Fore.GREEN}] {Fore.CYAN}Input How Many Codes to Generate: {Fore.RESET}", .02, newLine=False)
 
                 try:
-                    num = int(input(''))  # Ask the user for the amount of codes
+                    num = int(input(''))
                 except ValueError:
-                    input("Specified input wasn't a number.\nPress enter to exit")
-                    exit()  # Exit program
+                    input(f"{Fore.GREEN}[{Fore.YELLOW}>{Fore.GREEN}] {Fore.YELLOW}Specified input wasn't a number {Fore.RESET}/ {Fore.CYAN}Press enter to exit")
+                    sleep(1.5)
+                    main()
 
                 if USE_WEBHOOK:
-            # Get the webhook url, if the user does not wish to use a webhook the message will be an empty string
                     self.slowType(
-                        "If you want to use a Discord webhook, type it here or press enter to ignore: ", .02, newLine=False)
-                    url = input('')  # Get the awnser
-            # If the url is empty make it be None insted
+                        f"{Fore.GREEN}[{Fore.YELLOW}>{Fore.GREEN}] {Fore.CYAN}If you want to use a Discord webhook, type it here or press enter to ignore: {Fore.RESET}", .02, newLine=False)
+                    url = input('') 
                     webhook = url if url != "" else None
             
                     if webhook is not None:
-                        DiscordWebhook(  # Let the user know it has started logging the ids
+                        DiscordWebhook( 
                                 url=url,
-                                content=f"```Started checking urls\nI will send any valid codes here```"
+                                content=f"```STARTED!\nI will send any valid codes here in```"
                             ).execute()
 
-        # print() # Print a newline for looks
 
-                valid = []  # Keep track of valid codes
-                invalid = 0  # Keep track of how many invalid codes was detected
+                valid = []
+                invalid = 0 
                 chars = []
                 chars[:0] = string.ascii_letters + string.digits
 
-        # generate codes faster than using random.choice
                 c = numpy.random.choice(chars, size=[num, 23])
-                for s in c:  # Loop over the amount of codes to check
+                for s in c: 
                     try:
                         code = ''.join(x for x in s)
-                        url = f"https://discord.gift/{code}"  # Generate the url
+                        url = f"https://discord.gift/{code}"
 
-                        result = self.quickChecker(url, webhook)  # Check the codes
+                        result = self.quickChecker(url, webhook) 
 
-                        if result:  # If the code was valid
-                    # Add that code to the list of found codes
+                        if result: 
                             valid.append(url)
-                        else:  # If the code was not valid
-                            invalid += 1  # Increase the invalid counter by one
+                        else:  
+                            invalid += 1  
                     except KeyboardInterrupt:
-                # If the user interrupted the program
                         print("\nInterrupted by user")
-                        break  # Break the loop
+                        break 
 
-                    except Exception as e:  # If the request fails
-                        print(f" Error | {url} ")  # Tell the user an error occurred
+                    except Exception as e: 
+                        print(f" Error | {url} ") 
 
-                    if os.name == "nt":  # If the system is windows
+                    if os.name == "nt":
                         ctypes.windll.kernel32.SetConsoleTitleW(
-                            f"Nitro Generator and Checker - {len(valid)} Valid | {invalid} Invalid - Made by Drillenissen#4268")  # Change the title
+                            f"Nitro Generator - {len(valid)} Valid | {invalid} Invalid - Made by dnx#0023") 
                         print("")
-                    else:  # If it is a unix system
-                # Change the title
+                    else: 
                         print(
-                            f'\33]0;Nitro Generator and Checker - {len(valid)} Valid | {invalid} Invalid - Made by Drillenissen#4268\a', end='', flush=True)
+                            f'\33]0;Nitro Generator - {len(valid)} Valid | {invalid} Invalid - Made by dnx#0023\a', end='', flush=True)
 
                 print(f"""
         Results:
         Valid: {len(valid)}
         Invalid: {invalid}
-        Valid Codes: {', '.join(valid)}""")  # Give a report of the results of the check
+        Valid Codes: {', '.join(valid)}""") 
 
-        # Tell the user the program finished
-                input("\nThe end! Press Enter 5 times to close the program.")
-                [input(i) for i in range(4, 0, -1)]  # Wait for 4 enter presses
+                input(f"\n{Fore.GREEN}[{Fore.YELLOW}>{Fore.GREEN}] {Fore.CYAN}The end! Press Enter to Exit.")
+                sleep(1.5)
+                main()
 
-    # Function used to print text a little more fancier
             def slowType(self, text: str, speed: float, newLine=True):
-                for i in text:  # Loop over the message
-            # Print the one charecter, flush is used to force python to print the char
+                for i in text:
                     print(i, end="", flush=True)
-                    time.sleep(speed)  # Sleep a little before the next one
-                if newLine:  # Check if the newLine argument is set to True
-                    print()  # Print a final newline to make it act more like a normal print statement
+                    time.sleep(speed)
+                if newLine:
+                    print() 
 
-            def quickChecker(self, nitro:str, notify=None):  # Used to check a single code at a time
-        # Generate the request url
+            def quickChecker(self, nitro:str, notify=None): 
                 url = f"https://discordapp.com/api/v9/entitlements/gift-codes/{nitro}?with_application=false&with_subscription_plan=true"
-                response = requests.get(url)  # Get the response from discord
+                response = requests.get(url)
 
-                if response.status_code == 200:  # If the responce went through
-            # Notify the user the code was valid
-                    print(f" Valid | {nitro} ", flush=True,
+                if response.status_code == 200:
+                    print(f"{Fore.GREEN}[{Fore.MAGENTA}>{Fore.GREEN}] {Fore.MAGENTA} Valid {Fore.RESET}| {Fore.CYAN}{nitro} ", flush=True,
                         end="" if os.name == 'nt' else "\n")
-                    with open("Nitro Codes.txt", "w") as file:  # Open file to write
-                # Write the nitro code to the file it will automatically add a newline
+                    with open("Nitro Codes.txt", "w") as file:
                         file.write(nitro)
 
-                    if notify is not None:  # If a webhook has been added
-                        DiscordWebhook(  # Send the message to discord letting the user know there has been a valid nitro code
+                    if notify is not None: 
+                        DiscordWebhook( 
                             url=url,
-                            content=f"Valid Nito Code detected! @everyone \n{nitro}"
+                            content=f"Valid Nito Code! @everyone \n{nitro}"
                         ).execute()
 
-                    return True  # Tell the main function the code was found
+                    return True 
 
-        # If the responce got ignored or is invalid ( such as a 404 or 405 )
                 else:
-            # Tell the user it tested a code and it was invalid
-                    print(f" Invalid | {nitro} ", flush=True,
+                    print(f"{Fore.GREEN}[{Fore.RED}+{Fore.GREEN}] {Fore.RED}Invalid {Fore.RESET}| {Fore.CYAN}{nitro} ", flush=True,
                         end="" if os.name == 'nt' else "\n")
-                    return False  # Tell the main function there was not a code found
+                    return False
 
 
         if __name__ == '__main__':
-            Gen = NitroGen()  # Create the nitro generator object
-            Gen.main()  # Run the main code
+            Gen = NitroGen() 
+            Gen.main()
 
     elif choice == '2':
         print(f"{Fore.CYAN}CREDITS:\n{Fore.RESET} {Fore.BLUE} Link: {Fore.RESET} https://discord.com/invite/qXMjpXFgWG")
@@ -327,8 +303,8 @@ ctrl, shift, enter, esc, windows, left shift, right shift, left ctrl, right ctrl
 
 if __name__ == "__main__":
     import sys
+    search_for_updates()
     if os.path.basename(sys.argv[0]).endswith("exe"):
-        search_for_updates()
         if not os.path.exists(getTempDir()+"\\green_theme"):
             setTheme('green')
         clear()
