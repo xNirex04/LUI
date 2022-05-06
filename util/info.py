@@ -152,5 +152,5 @@ def Info(token):
                 if i < len(billing_info) - 1:
                     print(f'{Fore.RESET}\n')
         print(f'{Fore.RESET}')
-    input(f'{Fore.GREEN}[{Fore.YELLOW}>>>{Fore.GREEN}] {Fore.RESET}Drücke irgend eine Taste um Fortzufahren . . .  {Fore.RED}')
+    input(f'{Fore.GREEN}[{Fore.YELLOW}>{Fore.GREEN}] {Fore.RESET}Drücke irgend eine Taste um Fortzufahren . . .  {Fore.RED}')
     Generator.main()

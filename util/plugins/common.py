@@ -221,7 +221,7 @@ def fire(text):
 ########################################################################################################################################################
 
 def getTheme():
-    themes = ["green", "schwarz", "feuer", "wasser", "neon"]
+    themes = ["green", "black", "fire", "water", "neon"]
     with open(getTempDir()+"\\green_theme", 'r') as f:
         text = f.read()
         if not any(s in text for s in themes):
@@ -237,11 +237,11 @@ def setTheme(new: str):
         f.write(new)
 
 def banner(theme=None):
-    if theme == "schwarz":
+    if theme == "black":
         print(bannerTheme(blackwhite, blackwhite))
     elif theme == "fire":
         print(bannerTheme(fire, fire))
-    elif theme == "wasser":
+    elif theme == "water":
         print(bannerTheme(water, cyan))
     elif theme == "neon":
         print(bannerTheme(purple, neon))
